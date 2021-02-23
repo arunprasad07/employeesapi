@@ -9,6 +9,7 @@ namespace EmployeeService.Controllers
 {
     public class EmployeesController : ApiController
     {
+        [Authorize]
         public IEnumerable<Employee> GetAllEmployees()
         {
             using (EmployeeDBEntities entities = new EmployeeDBEntities())
